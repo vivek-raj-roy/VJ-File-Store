@@ -15,6 +15,7 @@ mongo_client = MongoClient(DB_URI)
 mongo_db = mongo_client["cloned_vjbotz"]
 mongo_collection = mongo_db[DB_NAME]
 
+"""
 @Client.on_message(filters.command("clone") & filters.private)
 async def clone(client, message):
     if CLONE_MODE == False:
@@ -74,7 +75,7 @@ async def delete_cloned_bot(client, message):
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
-
+"""
 async def restart_bots():
     logging.info("Restarting all bots........")
     bots = list(mongo_db.bots.find())
